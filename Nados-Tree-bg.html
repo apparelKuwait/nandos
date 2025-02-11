@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+ <title>Tree View - Nando's</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+    background-image: url("https://images.ctfassets.net/xlzobf9ybr6d/1GEfHWl7s2vkQuHmbbjWos/8248da6f74b8084241d8affba71422b1/64460-nandos-Jan25-LMD-1360x860.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+        }
+        .container {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+         }
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: red;
+            margin-bottom: 10px;
+        }
+       .title {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .node {
+            background: white;
+            color: black;
+            padding: 10px;
+            border: 2px solid red;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .submenu {
+            display: none;
+            margin-left: 20px;
+        }
+        .show {
+            display: block;
+        }
+       .button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            background: white;
+            border: 2px solid red;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+  .left-image {
+    float: left;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  .no-underline {
+    text-decoration: none;
+    color: inherit; /* Keeps the default text color */
+  }
+    </style>
+</head>
+
+<body>
+        <div class="container">
+	<div class="logo"><a href="https://www.nandosperiperi.com/" target="_blank"><img src="https://i.postimg.cc/sgvHDvMN/Nandos-Icon.png" alt="Nandos" width="100" height="100"></a></div>
+	<div class="title">Flame-Grilled PERi-PERi Chicken</div>
+        <div class="button" onclick="toggleMenu('order-menu')">Order Now ▼</div>
+        <div id="order-menu" class="submenu">
+            <div class="button"><a href="https://www.talabat.com/kuwait/nandos" target="_blank" class="no-underline">
+            <img class="left-image" src ="https://i.postimg.cc/0QMJz1Yx/Talabat.png">Talabat</a></div>
+            <div class="button"><a href="https://deliveroo.co.uk/brands/nandos" target="_blank" class="no-underline">
+    	     <img class="left-image" src ="https://i.postimg.cc/SQ9DPwww/deliveroo.png">Deliveroo</a></div>
+            <div class="button"><a href="https://www.jahez.net/index-en.html#page-top" target="_blank" class="no-underline">
+	    <img class="left-image" src ="https://i.postimg.cc/mgmwMRHF/Jahez.png">Jahez</a></div>
+            <div class="button"><a href="https://getcari.com/" target="_blank" class="no-underline">
+            <img class="left-image" src ="https://play-lh.googleusercontent.com/XAgQFWkN9HZlwEAGFaI56vTukyWGbBqFdR531538hEioKGOchY2svvWk0A46jANrpwM=w240-h480-rw">Cari</a></div>
+        </div>
+        <div class="button" onclick="toggleMenu('locations-menu')">Locations ▼</div>
+        <div id="locations-menu" class="submenu">
+            <div class="button"><a href="https://maps.app.goo.gl/beU279Gcj9Rx2PDh9" target="_blank" class="no-underline"> The Warehouse Mall</a></div>
+            <div class="button"><a href="https://maps.app.goo.gl/HiUHSwvwvsfYG7Q18" target="_blank" class="no-underline">Al Kout Mall</a></div>
+            <div class="button"><a href="https://maps.app.goo.gl/scXMFcUzWwXf82NN9" target="_blank" class="no-underline">Marina Crescent</a></div>
+            <div class="button"><a href="https://maps.app.goo.gl/3ydikgpDEi9TKdav9" target="_blank" class="no-underline">Assima Mall</a></div>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleMenu(id) {
+            var menu = document.getElementById(id);
+            menu.classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>
