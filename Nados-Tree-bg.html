@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
  <title>Tree View - Nando's</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
+ <style>
+       body {
+            font-family: Barlow, serif;
+            font-style: normal;
             background-color: black;
             color: white;
             text-align: center;
-    background-image: url("https://images.ctfassets.net/xlzobf9ybr6d/1GEfHWl7s2vkQuHmbbjWos/8248da6f74b8084241d8affba71422b1/64460-nandos-Jan25-LMD-1360x860.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
+            background-image: url("https://images.ctfassets.net/xlzobf9ybr6d/1GEfHWl7s2vkQuHmbbjWos/8248da6f74b8084241d8affba71422b1/64460-nandos-Jan25-LMD-1360x860.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+
         }
         .container {
             display: inline-block;
@@ -67,49 +71,63 @@
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-
         .button:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
         }
-
   .left-image {
     float: left;
+    vertical-align:middle;
     margin-right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: auto;
   }
   .no-underline {
     text-decoration: none;
     color: inherit; /* Keeps the default text color */
   }
-    </style>
+.submenu .button {
+    clear: both; /* Clears float, so the button won't be affected by previous floats */
+    margin-bottom: 10px; /* Adds spacing between the buttons */
+}
+ </style>
 </head>
 
 <body>
-        <div class="container">
-	<div class="logo"><a href="https://www.nandosperiperi.com/" target="_blank"><img src="https://i.postimg.cc/sgvHDvMN/Nandos-Icon.png" alt="Nandos" width="100" height="100"></a></div>
-	<div class="title">Flame-Grilled PERi-PERi Chicken</div>
-        <div class="button" onclick="toggleMenu('order-menu')">Order Now ▼</div>
-        <div id="order-menu" class="submenu">
-            <div class="button"><a href="https://www.talabat.com/kuwait/nandos" target="_blank" class="no-underline">
-            <img class="left-image" src ="https://i.postimg.cc/0QMJz1Yx/Talabat.png">Talabat</a></div>
-            <div class="button"><a href="https://deliveroo.co.uk/brands/nandos" target="_blank" class="no-underline">
-    	     <img class="left-image" src ="https://i.postimg.cc/SQ9DPwww/deliveroo.png">Deliveroo</a></div>
-            <div class="button"><a href="https://www.jahez.net/index-en.html#page-top" target="_blank" class="no-underline">
-	    <img class="left-image" src ="https://i.postimg.cc/mgmwMRHF/Jahez.png">Jahez</a></div>
-            <div class="button"><a href="https://getcari.com/" target="_blank" class="no-underline">
-            <img class="left-image" src ="https://play-lh.googleusercontent.com/XAgQFWkN9HZlwEAGFaI56vTukyWGbBqFdR531538hEioKGOchY2svvWk0A46jANrpwM=w240-h480-rw">Cari</a></div>
-        </div>
+
+<div class="container">
+
+<div class="logo"><a href="https://www.nandosperiperi.com/" target="_blank"><img src="https://i.postimg.cc/sgvHDvMN/Nandos-Icon.png" alt="Nandos" width="100" height="100"></a></div>
+<div class="title"><p style="barlow-thin">Flame-Grilled PERi-PERi Chicken</p></div>
+
+<div class="button" onclick="toggleMenu('order-menu')">Order Now ▼</div>
+
+<div id="order-menu" class="submenu">
+    <div class="button">
+        <a href="https://deliveroo.co.uk/brands/nandos" target="_blank" class="no-underline">
+        <img class="left-image" src="https://i.postimg.cc/nVyPS2k1/Talabat.png">Talabat</a>
+    </div>
+    <div class="button">
+        <a href="https://deliveroo.co.uk/brands/nandos" target="_blank" class="no-underline">
+            <img class="left-image" src="https://i.postimg.cc/KzK0J33V/Deliveroo.png">Deliveroo</a>
+    </div>
+    <div class="button">
+        <a href="https://www.jahez.net/index-en.html#page-top" target="_blank" class="no-underline">
+            <img class="left-image" src="https://i.postimg.cc/tJW2H05N/Jahez.png">Jahez</a>
+    </div>
+    <div class="button">
+        <a href="https://getcari.com/" target="_blank" class="no-underline">
+            <img class="left-image" src="https://i.postimg.cc/Jn9Pg7bh/Cari.png">Cari</a>
+    </div>
+</div>
         <div class="button" onclick="toggleMenu('locations-menu')">Locations ▼</div>
         <div id="locations-menu" class="submenu">
-            <div class="button"><a href="https://maps.app.goo.gl/beU279Gcj9Rx2PDh9" target="_blank" class="no-underline"> The Warehouse Mall</a></div>
+            <div class="button"><a href="https://maps.app.goo.gl/beU279Gcj9Rx2PDh9" target="_blank" class="no-underline">The Warehouse Mall</a></div>
             <div class="button"><a href="https://maps.app.goo.gl/HiUHSwvwvsfYG7Q18" target="_blank" class="no-underline">Al Kout Mall</a></div>
             <div class="button"><a href="https://maps.app.goo.gl/scXMFcUzWwXf82NN9" target="_blank" class="no-underline">Marina Crescent</a></div>
             <div class="button"><a href="https://maps.app.goo.gl/3ydikgpDEi9TKdav9" target="_blank" class="no-underline">Assima Mall</a></div>
         </div>
     </div>
-
 
     <script>
         function toggleMenu(id) {
